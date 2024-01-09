@@ -1,0 +1,100 @@
+
+.app-container {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Sidebar takes 300px, rest is for main content */
+    grid-gap: 0;
+    height: 100vh; /* Adjust the height of the entire app container */
+    background-image: url('/assets/background.png');
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; /* Make the sidebar take full viewport height */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/assets/background.png');
+    background-size: cover;
+    overflow-y: auto;
+    padding-bottom: 100px; /* Ensure space for the footer */
+    position: relative;
+}
+
+.footer-image {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+    /* Other styles for the footer */
+
+
+.labels-inline {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#graph1,
+#graph2 {
+    width: 90%; /* Adjust as needed */
+    height: 40vh; /* Adjust as needed */
+    margin: 0 auto; /* Center the charts */
+}
+
+.title_name {
+    margin-right: 5px; /* Add spacing between labels */
+}
+
+
+
+
+
+.demand_coef_slider{
+    margin-top: 35px;
+}
+
+.activity_coef_slider{
+    margin-top: 35px;
+}
+
+.demand_growth_slider{
+    margin-top: 35px;
+}
+
+.activity_growth_slider{
+    margin-top: 35px;
+}
+
+.custom-checklist input[type="checkbox"] {
+    transform: scale(1.2); /* Adjust the scale value to make the checkbox bigger */
+    margin-right: 8px; /* Add margin between the label and the larger checkbox */
+}
+
+/* Custom CSS to style the sidebar elements */
+.sidebar {
+    font-family: Arial, sans-serif; /* Change font family */
+    font-size: 16px; /* Change font size */
+    color: #333; /* Change text color */
+}
+
