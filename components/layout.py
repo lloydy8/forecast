@@ -1,7 +1,4 @@
-from dash import Dash, html, dcc, Input, Output
-from datetime import datetime
-import pandas as pd
-import dash_daq as daq
+from dash import Dash, html, dcc
 
 def create_layout(app: Dash) -> html.Div:
     return html.Div(className="app-container", children=[
@@ -152,3 +149,4 @@ def create_layout(app: Dash) -> html.Div:
     ]),
 
     ])
+
