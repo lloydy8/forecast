@@ -1,7 +1,6 @@
 from datetime import datetime
 import pandas as pd
 import plotly.graph_objs as go
-from dash import html
 import numpy as np
 from statistics import mean
 
@@ -155,11 +154,14 @@ def update_dataframe(start_date, intervals_value, interval_value, demand_coef_sl
     for i in range(7, int(intervals_value)):
         df.loc[i, 'Average Waiting Time'] = df['WIP'][i] / df['Approximate Demand'].iloc[a:i+1].mean()
         a += 1
+    '''
+
 
     df['Approximate Activity'] = df['Approximate Activity'].round(2)
     df['Approximate Demand'] = df['Approximate Demand'].round(2)
     df['WIP'] = df['WIP'].round(2)
     df['Average Waiting Time'] = df['Average Waiting Time'].round(2)
+    '''
 
     # Create traces for 'Approximate Demand' and 'Approximate Activity'
     trace1 = go.Scatter(x=df['Date'], y=df['Approximate Demand'], mode='lines', name='Demand', line=dict(color='blue'))
