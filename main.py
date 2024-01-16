@@ -1,7 +1,8 @@
-from dash import Dash, html, dcc, Input, Output, no_update, State
+from dash import Dash, Input, Output
 from dash_bootstrap_components.themes import BOOTSTRAP
 from components.layout import create_layout
 from components.callback import update_dataframe
+
 
 def main():
     app = Dash(external_stylesheets=[BOOTSTRAP, '/assets/style.css'])
@@ -11,7 +12,7 @@ def main():
     # Assign the callback to the app object
     app.callback(
         Output('graph1','figure'),
-        Output('graph2','figure'),  
+        Output('graph2','figure'), 
         [
             Input('start_date', 'value'),
             Input('intervals_value', 'value'),
@@ -55,7 +56,7 @@ def main():
         ],
     )(update_dataframe)
 
-    app.run_server(debug=True)
+    app.run_server(debug=False)
 
 if __name__ == "__main__":
     main()
